@@ -1,10 +1,9 @@
-#abc 
-
-
 import random
 import os
 import time
 import re
+from openai import OpenAI
+client = OpenAI(api_key=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)
 #variavel
 fisico = 0
 #RPG TESTANDO DEF
