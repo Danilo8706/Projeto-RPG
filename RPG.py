@@ -1,9 +1,14 @@
+from openai import OpenAI
+import urllib.request
+from io import BytesIO
+from PIL import Image
+import base64
+from io import BytesIO
+from PIL import Image
 import random
 import os
 import time
-import re
-from openai import OpenAI
-client = OpenAI(api_key=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)
+client = OpenAI(api_key="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")
 #variavel
 fisico = 0
 #RPG TESTANDO DEF
@@ -69,9 +74,10 @@ def proximo():
     print == ("aperte enter para próximo turno(●'◡'●)")
 def clear():
     os.system('cls')
+   
+nome = input("digite seu nome:\n")
 resposta= {"murilex","murilo"}
-nome2 = 0     
-nome = input("digite seu nome:\n")  
+nome2 = 0    
 nome2 = nome.lower().strip()
 if nome2 in resposta:
      print("você é betinha🤣")
@@ -86,6 +92,7 @@ if nome2 in resposta:
 print ("você encontrou um goblin carniceiro")  
 print ("batalhar? ")
 while True:  
+
     escolha = input("y-sim x-não")
     escolha = escolha.lower()
     if escolha in ("y","s","si","sim"):
@@ -93,15 +100,15 @@ while True:
     if escolha in ("x","n","não"):
         print ("preguiçoso")
         break
-    else:
-        print ("escolha invalida")
+    
     if y == 1 :
         os.system('cls')
         print ("iniciando batalha...")
         time.sleep(3)
         os.system('cls')
         while True:
-  
+            img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\aventureiro.jpeg")
+            img.show()
             if contador > 0:
                 contador -= 1
                 multi = 1.75
@@ -122,11 +129,15 @@ while True:
                 print("*goblin:você ainda insiste em me derrotar humano desprezivel?*\n")              
             próximo = input("aperte enter para ir para menu de batalha")
             os.system('cls')
+            img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\Gemini_Generated_Image_akei5dakei5dakei.jpeg")
+            img.show()
             print ("menu de batalha")
             menuatk = input("1-ataques fisicos(roletar dado)\n2-habilidades\n3-defender(recupera sp)\n")
 
 
             if menuatk ==  "1":
+                img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\Gemini_Generated_Image_akei5dakei5dakei.jpeg")
+                img.show()
                 fisico = input("1-espadada\n2-flechada(chance de dodge)")
                 if fisico == "1":
                         os.system('cls')
@@ -146,7 +157,12 @@ while True:
                             ataque = random.randint(21,27)
                             vida2 = vida2 - ataque*multi
                             print (f"VOCÊ DEU {ataque}DE DANOOO (òtimo ataque)")
+                        img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\Gemini_Generated_Image_rpr9darpr9darpr9.jpeg")
+                        img.show()    
+                        proximo = input("aperte enter para próximo turno(●'◡'●)")
                         print (atk_goblin())
+                        img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\Gemini_Generated_Image_tkg6ubtkg6ubtkg6.jpeg")
+                        img.show()
                         vida = vida - dano2
                         proximo = input("aperte enter para próximo turno(●'◡'●)")
                         os.system('cls')
@@ -291,7 +307,7 @@ while True:
             elif vida <= 0:
                 print ("você foi derrotado! seu lixo")
                 break      
-    while True:
+        while True:
             print("notificação:\nLVL.Up  aumento de estatísticas\nsp reastaurado")
             sp = 45
             print("a segunda batalha se iniciará!")      
@@ -471,7 +487,8 @@ while True:
                         proximo = input("aperte enter para próximo turno(●'◡'●)")
                         time.sleep(3)
                         clear
-
+    else:
+        print ("escolha invalida")
 
                 
                 
