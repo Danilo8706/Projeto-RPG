@@ -8,7 +8,7 @@ from PIL import Image
 import random
 import os
 import time
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 #variavel
 fisico = 0
 #RPG TESTANDO DEF
@@ -91,8 +91,8 @@ if nome2 in resposta:
 #tentando cria a primeira batalha
 print ("você encontrou um goblin carniceiro")  
 print ("batalhar? ")
-while True:  
-
+while True:
+    print(resposta.output_text)
     escolha = input("y-sim x-não")
     escolha = escolha.lower()
     if escolha in ("y","s","si","sim"):
