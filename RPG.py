@@ -92,7 +92,7 @@ if nome2 in resposta:
 print ("você encontrou um goblin carniceiro")  
 print ("batalhar? ")
 while True:
-    print(resposta.output_text)
+    
     escolha = input("y-sim x-não")
     escolha = escolha.lower()
     if escolha in ("y","s","si","sim"):
@@ -107,7 +107,7 @@ while True:
         time.sleep(3)
         os.system('cls')
         while True:
-            img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\aventureiro.jpeg")
+            img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\imagen\aventureiro.jpeg")
             img.show()
             if contador > 0:
                 contador -= 1
@@ -129,14 +129,14 @@ while True:
                 print("*goblin:você ainda insiste em me derrotar humano desprezivel?*\n")              
             próximo = input("aperte enter para ir para menu de batalha")
             os.system('cls')
-            img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\Gemini_Generated_Image_akei5dakei5dakei.jpeg")
+            img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\imagen\Gemini_Generated_Image_akei5dakei5dakei.jpeg")
             img.show()
             print ("menu de batalha")
             menuatk = input("1-ataques fisicos(roletar dado)\n2-habilidades\n3-defender(recupera sp)\n")
 
 
             if menuatk ==  "1":
-                img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\Gemini_Generated_Image_akei5dakei5dakei.jpeg")
+                img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\imagen\Gemini_Generated_Image_akei5dakei5dakei.jpeg")
                 img.show()
                 fisico = input("1-espadada\n2-flechada(chance de dodge)")
                 if fisico == "1":
@@ -157,11 +157,11 @@ while True:
                             ataque = random.randint(21,27)
                             vida2 = vida2 - ataque*multi
                             print (f"VOCÊ DEU {ataque}DE DANOOO (òtimo ataque)")
-                        img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\Gemini_Generated_Image_rpr9darpr9darpr9.jpeg")
+                        img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\imagen\Gemini_Generated_Image_rpr9darpr9darpr9.jpeg")
                         img.show()    
                         proximo = input("aperte enter para próximo turno(●'◡'●)")
                         print (atk_goblin())
-                        img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\Gemini_Generated_Image_tkg6ubtkg6ubtkg6.jpeg")
+                        img = Image.open(r"c:\Users\danilo_b_santos\Documents\GitHub\Projeto-RPG\imagen\Gemini_Generated_Image_tkg6ubtkg6ubtkg6.jpeg")
                         img.show()
                         vida = vida - dano2
                         proximo = input("aperte enter para próximo turno(●'◡'●)")
